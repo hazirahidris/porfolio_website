@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Hazirah Syuhada Binti Idris - Portfolio</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-primary': '#3b82f6', // Blue 500
+                        'brand-secondary': '#1e40af', // Blue 800
+                        'dark-bg': '#111827', // Gray 900
+                        'dark-card': '#1f2937', // Gray 800
+                        'dark-text': '#d1d5db', // Gray 300
+                        'dark-heading': '#f9fafb', // Gray 50
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-bg text-dark-text font-sans leading-relaxed antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-dark-bg/80 backdrop-blur-md sticky top-0 z-50 w-full border-b border-gray-700">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-dark-heading hover:text-brand-primary transition-colors">
+                        Hazirah Idris
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-primary transition-colors">About</a>
+                    <a href="#experience" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-primary transition-colors">Experience</a>
+                    <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-primary transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-primary transition-colors">Projects</a>
+                    <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-brand-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon for menu (burger) -->
+                        <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <!-- Icon for close (X) -->
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-brand-primary transition-colors">About</a>
+                <a href="#experience" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-brand-primary transition-colors">Experience</a>
+                <a href="#skills" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-brand-primary transition-colors">Skills</a>
+                <a href="#projects" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-brand-primary transition-colors">Projects</a>
+                <a href="#contact" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-brand-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center py-20">
+            <div class="w-full">
+                <span class="text-brand-primary font-semibold">Hello, I am</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-dark-heading mt-2 mb-4">Hazirah Idris</h1>
+                <h2 class="text-2xl md:text-4xl font-semibold text-gray-400 mb-8">Aspiring Analyst in Data, Risk, and Tech.</h2>
+                <p class="text-lg text-dark-text max-w-2xl mb-10">
+                    I'm an analyst with a background in Anti-Financial Crime and data analytics, skilled in SQL, Power BI and Python. I'm passionate about the intersection of technology, risk and business transformation.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/hazirahidris/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-brand-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-brand-secondary transition-colors">
+                        LinkedIn
+                        <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/hazirahidris" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-700 text-dark-heading font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
+                        Github
+                        <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.034c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.768-1.589 8.201-6.086 8.201-11.385 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-3xl font-bold text-dark-heading mb-3">About Me</h2>
+            <div class="h-1 w-20 bg-brand-primary mb-8"></div>
+            <p class="text-lg text-dark-text max-w-3xl">
+                Aspiring analyst with a background in Anti-Financial Crime (AFC) operations, internal audit and data analytics within the banking sector. Skilled in compliance and risk management, complemented by technical proficiency in SQL, Power BI and Python for data-driven insights. Eager to contribute to advisory and consulting engagements at the intersection of technology, risk and business transformation.
+            </p>
+        </section>
+
+        <!-- Experience & Education (Tabs) -->
+        <section id="experience" class="py-20">
+            <h2 class="text-3xl font-bold text-dark-heading mb-3">My Journey</h2>
+            <div class="h-1 w-20 bg-brand-primary mb-8"></div>
+
+            <!-- Tab Buttons -->
+            <div class="mb-8 flex flex-wrap gap-2">
+                <button class="tab-btn py-2 px-4 rounded-lg font-medium transition-colors" data-tab="work">Work Experience</button>
+                <button class="tab-btn py-2 px-4 rounded-lg font-medium transition-colors" data-tab="education">Education</button>
+                <button class="tab-btn py-2 px-4 rounded-lg font-medium transition-colors" data-tab="leadership">Leadership</button>
+            </div>
+
+            <!-- Tab Content Panels -->
+            <div class="max-w-3xl">
+                <!-- Work Experience Panel -->
+                <div id="tab-content-work" class="tab-content space-y-6">
+                    <div class="bg-dark-card p-6 rounded-lg shadow-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold text-dark-heading">KYC Analyst, AFC Operations - Business Banking</h3>
+                                <p class="text-md font-medium text-brand-primary">United Overseas Bank</p>
+                            </div>
+                            <span class="text-sm text-gray-400 flex-shrink-0 ml-4">Apr 2025 - Present</span>
+                        </div>
+                        <ul class="list-disc list-inside text-dark-text space-y-2">
+                            <li>Engaged directly with customers and relationship managers to collect and validate updated documentation, ensuring accuracy and completeness in the AS400 system.</li>
+                            <li>Analyzed customer profiles and conducted KYC reviews, risk assessments and CDD/EDD for high and moderate risk business banking customers in compliance with AML/CFT requirements.</li>
+                            <li>Enhanced data management by maintaining accurate and complete customer records, supporting regulatory reporting and audit readiness.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-card p-6 rounded-lg shadow-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold text-dark-heading">Internal Audit Intern, Group Islamic-Maybank Group Audit</h3>
+                                <p class="text-md font-medium text-brand-primary">Maybank</p>
+                            </div>
+                            <span class="text-sm text-gray-400 flex-shrink-0 ml-4">Sep 2024 - Mar 2025</span>
+                        </div>
+                        <ul class="list-disc list-inside text-dark-text space-y-2">
+                            <li>Assisted in reviewing and preparing audit reports with a focus on corporate governance, ESG, and Islamic business principles to ensure regulatory compliance and ethical business practices.</li>
+                            <li>Conducted data analysis on financial records to generate insights, assess risk exposure and identify control weaknesses, supporting governance and strategic decision-making.</li>
+                            <li>Collaborated with audit teams to streamline processes and ensure timely completion of audit deliverables, strengthening overall audit quality and efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Panel -->
+                <div id="tab-content-education" class="tab-content hidden space-y-6">
+                    <div class="bg-dark-card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-dark-heading">Bachelor of Information Systems (Hons) Intelligent Systems Engineering</h3>
+                        <p class="text-md font-medium text-brand-primary">Universiti Teknologi MARA (UiTM)</p>
+                        <p class="text-sm text-gray-400 mt-1 mb-2">2021 - 2025 | Shah Alam, Selangor</p>
+                        <ul class="list-disc list-inside text-dark-text">
+                            <li>Big Data Track</li>
+                            <li>CGPA: 3.73/4.0</li>
+                            <li>Vice-Chancellor's Award Recipient</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-dark-heading">Foundation in Engineering</h3>
+                        <p class="text-md font-medium text-brand-primary">Universiti Teknologi MARA (UiTM)</p>
+                        <p class="text-sm text-gray-400 mt-1 mb-2">2020 - 2021 | Dengkil, Selangor</p>
+                        <ul class="list-disc list-inside text-dark-text">
+                            <li>CGPA: 3.44/4.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Leadership Panel -->
+                <div id="tab-content-leadership" class="tab-content hidden space-y-6">
+                    <div class="bg-dark-card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-dark-heading">Head of Social and Strategic Planning Bureau</h3>
+                        <p class="text-md font-medium text-brand-primary">Artificial Intelligent Society, UiTM Shah Alam</p>
+                        <p class="text-sm text-gray-400 mt-1 mb-2">Oct 2021 - Apr 2023</p>
+                        <ul class="list-disc list-inside text-dark-text space-y-2">
+                            <li>Provided overall leadership and direction to the Social and Strategic Planning Bureau team.</li>
+                            <li>Oversaw the planning and execution of events undertaken by the bureau.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold text-dark-heading mb-3">Skills & Certifications</h2>
+            <div class="h-1 w-20 bg-brand-primary mb-8"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark-heading mb-6">Technical Skills</h3>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-3">Data Analytics</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">PowerBI</span>
+                            <span class="skill-pill">Tableau</span>
+                            <span class="skill-pill">Rapid Miner</span>
+                            <span class="skill-pill">Weka</span>
+                            <span class="skill-pill">SAS Viya</span>
+                            <span class="skill-pill">Microsoft Excel</span>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-3">Programming</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">R</span>
+                            <span class="skill-pill">C</span>
+                            <span class="skill-pill">C++</span>
+                            <span class="skill-pill">Java</span>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-3">Multimedia & Other</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Adobe</span>
+                            <span class="skill-pill">Canva</span>
+                            <span class="skill-pill">Microsoft Word</span>
+                            <span class="skill-pill">Microsoft PowerPoint</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-200 mb-3">Languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Malay (Native)</span>
+                            <span class="skill-pill">English (Professional)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark-heading mb-6">Certifications</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-primary flex-shrink-0 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.177A6.96 6.96 0 0110 2a6.96 6.96 0 013.733 1.177L10 8.586 6.267 3.177zM2.519 6.38A6.96 6.96 0 012 10a6.96 6.96 0 01.519-3.62l3.655 5.118L2.519 6.38zM8.11 14.882L4.177 8.733 1.177 13.733A6.96 6.96 0 012 17a6.96 6.96 0 01.38-2.519l5.73-1.6zM10 18a6.96 6.96 0 01-3.733-1.177L10 11.414l3.733 5.409A6.96 6.96 0 0110 18zm3.62-2.519l-5.73-1.6L11.89 8.11l3.933 6.151a6.96 6.96 0 01-.519 3.62l-3.655-5.118zM17.481 13.62a6.96 6.96 0 01.519-3.62l-3.655-5.118L17.481 13.62zM15.889 5.118l-3.933 6.151 5.73 1.6A6.96 6.96 0 0118 10a6.96 6.96 0 01-1.177 3.733L13.733 8.733 15.889 5.118z" clip-rule="evenodd" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-100">Microsoft Certified Power BI Data Analyst Associate</h4>
+                                <p class="text-sm text-gray-400">Microsoft</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-primary flex-shrink-0 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.177A6.96 6.96 0 0110 2a6.96 6.96 0 013.733 1.177L10 8.586 6.267 3.177zM2.519 6.38A6.96 6.96 0 012 10a6.96 6.96 0 01.519-3.62l3.655 5.118L2.519 6.38zM8.11 14.882L4.177 8.733 1.177 13.733A6.96 6.96 0 012 17a6.96 6.96 0 01.38-2.519l5.73-1.6zM10 18a6.96 6.96 0 01-3.733-1.177L10 11.414l3.733 5.409A6.96 6.96 0 0110 18zm3.62-2.519l-5.73-1.6L11.89 8.11l3.933 6.151a6.96 6.96 0 01-.519 3.62l-3.655-5.118zM17.481 13.62a6.96 6.96 0 01.519-3.62l-3.655-5.118L17.481 13.62zM15.889 5.118l-3.933 6.151 5.73 1.6A6.96 6.96 0 0118 10a6.96 6.96 0 01-1.177 3.733L13.733 8.733 15.889 5.118z" clip-rule="evenodd" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-100">Database Design & Database Programming with SQL</h4>
+                                <p class="text-sm text-gray-400">Oracle</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-primary flex-shrink-0 mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.177A6.96 6.96 0 0110 2a6.96 6.96 0 013.733 1.177L10 8.586 6.267 3.177zM2.519 6.38A6.96 6.96 0 012 10a6.96 6.96 0 01.519-3.62l3.655 5.118L2.519 6.38zM8.11 14.882L4.177 8.733 1.177 13.733A6.96 6.96 0 012 17a6.96 6.96 0 01.38-2.519l5.73-1.6zM10 18a6.96 6.96 0 01-3.733-1.177L10 11.414l3.733 5.409A6.96 6.96 0 0110 18zm3.62-2.519l-5.73-1.6L11.89 8.11l3.933 6.151a6.96 6.96 0 01-.519 3.62l-3.655-5.118zM17.481 13.62a6.96 6.96 0 01.519-3.62l-3.655-5.118L17.481 13.62zM15.889 5.118l-3.933 6.151 5.73 1.6A6.96 6.96 0 0118 10a6.96 6.96 0 01-1.177 3.733L13.733 8.733 15.889 5.118z" clip-rule="evenodd" /></svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-100">SAS Visual Analytics 1 & 2 for SAS Viya</h4>
+                                <p class="text-sm text-gray-400">SAS</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold text-dark-heading mb-3">Projects</h2>
+            <div class="h-1 w-20 bg-brand-primary mb-8"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card -->
+                <div class="bg-dark-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark-heading mb-2">Gender Identification on Manglish Tweets Using Hybrid Deep Learning</h3>
+                        <p class="text-dark-text mb-4">
+                            Developed a deep learning model to identify the gender of X (formerly Twitter) users based on tweets written in Manglish (a mix of Malay and English). Applied NLP techniques to process and analyze social media data for research and cybersecurity purposes, leveraging machine learning and LLMs to extract insights.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Deep Learning</span>
+                            <span class="skill-pill">NLP</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Data Preprocessing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extracurricular Card -->
+                <div class="bg-dark-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark-heading mb-4">Extracurricular Achievements</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="text-yellow-400 mr-3">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                </span>
+                                <span><span class="font-semibold text-gray-100">First Place</span> - Basketball Championship (SAF) 2023</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-gray-400 mr-3">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zM4.09 4.09a.75.75 0 011.06 0l1.06 1.06a.75.75 0 01-1.06 1.06L4.09 5.15a.75.75 0 010-1.06zM13.79 13.79a.75.75 0 011.06 0l1.06 1.06a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zM2 10a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 012 10zM15 10a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 0115 10zM5.15 14.85a.75.75 0 010-1.06l1.06-1.06a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0zM14.85 5.15a.75.75 0 010-1.06l1.06-1.06a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                                <span><span class="font-semibold text-gray-100">Finalist Team</span> - Malaysia Data Innovation Talent X DOSM Datathon 2023</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-blue-400 mr-3">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v4.5h.75a.75.75 0 00.75-.75v-3.75z" clip-rule="evenodd" /></svg>
+                                </span>
+                                <span><span class="font-semibold text-gray-100">Participation</span> - PPKomp 2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+            <h2 class="text-3xl font-bold text-dark-heading mb-3">Get In Touch</h2>
+            <div class="h-1 w-20 bg-brand-primary mb-8 mx-auto"></div>
+            
+            <p class="text-lg text-dark-text max-w-lg mx-auto mb-8">
+                I'm currently seeking new opportunities and am eager to contribute to advisory and consulting engagements. Feel free to reach out if you'd like to connect!
+            </p>
+            
+            <a href="mailto:hazirahidris02@gmail.com" class="inline-flex items-center bg-brand-primary text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-brand-secondary transition-colors text-lg">
+                <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.161V6a2 2 0 00-2-2H3z" /><path d="M19 8.839l-7.441 3.721a2.75 2.75 0 01-3.118 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" /></svg>
+                Say Hello
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-700 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Noor Hazirah Syuhada Binti Idris. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>

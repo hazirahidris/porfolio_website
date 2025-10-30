@@ -1,0 +1,38 @@
+/* Custom style for the active nav link */
+.nav-link-active {
+    color: #3b82f6; /* brand-primary */
+    font-weight: 600;
+}
+
+/* Custom style for active tab */
+.tab-active {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* Custom CSS for skill pills */
+.skill-pill {
+    display: inline-block;
+    background-color: #374151; /* gray-700 */
+    color: #d1d5db; /* gray-300 */
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Set default tab button styles */
+.tab-btn {
+    background-color: #1f2937; /* dark-card */
+    color: #d1d5db; /* dark-text */
+}
+
+.tab-btn:hover {
+    background-color: #374151; /* gray-700 */
+}
+
+/* Override default styles for the active tab */
+.tab-btn.tab-active {
+    background-color: #3b82f6; /* brand-primary */
+    color: #ffffff; /* white */
+}
